@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Registration</title>
     <link rel="stylesheet" href="mystyle.css">
 </head>
 
@@ -45,54 +45,91 @@
 
                                 
 
-                                <label for="fname" > <b>First Name: </b> </label>
-                                
+                                <label for="fname" class="required"> <b>First Name </b> </label>
                                 <input type="text" id="fname" name="fname" placeholder="eg. Spongebob" class="fbox" lang="en"
-                                pattern="[A-Za-z]+">
+                                pattern="[A-Za-z]+" required> 
 
-                                <label for="lname" class="le"> <b>Last Name: </b> </label>
+                                <label for="lname" class="required"> <b>Last Name </b> </label>
                                 
                                 <input type="text" id="lname" name="lname" placeholder="eg. Squearpants" class="fbox" lang="en"
-                                pattern="[A-Za-z]+">
+                                pattern="[A-Za-z]+" required>
                                     <br><br>
 
                                 <div>
-                                    <label for="jname" class="tname"> <b>ชื่อจริง (ภาษาไทย): </b> </label>
+                                    <label for="jname" class="tname required"> <b>ชื่อจริง (ภาษาไทย) </b> </label>
                                 
-                                    <input type="text" id="jname" name="jname" placeholder="eg. รัตยา" class="fbox tfbox" lang="th"
-                                    pattern="[\u0E00-\u0E7F]+">
+                                    <input type="text" id="jname" name="jname" placeholder="eg. สปอนจ์บ็อบ" class="fbox tfbox" lang="th"
+                                    pattern="[\u0E00-\u0E7F]+" required>
                                 </div>
                                 <br>
                                 <div>
-                                    <label for="nname" class="tlname"> <b>นามสกุล (ภาษาไทย): </b> </label>
+                                    <label for="nname" class="tlname required" class="required"> <b>นามสกุล (ภาษาไทย) </b> </label>
                                     
-                                    <input type="text" id="nname" name="nname" placeholder="eg. วิริชัยรัตนากูล" class="fbox tfbox" lang="th"
-                                    pattern="[\u0E00-\u0E7F]+">
+                                    <input type="text" id="nname" name="nname" placeholder="eg. สแควร์แพนท" class="fbox tfbox" lang="th"
+                                    pattern="[\u0E00-\u0E7F]+" required>
                                 </div>
                             </div>
                                 <br>
-                            <div id="Sex">
-                                <form>
-                                    <div id="sex">
-                                        <label for="title"> <B>Sex: </B></label>
-                                </div>
-                                        <div id="gc">
-                                            
-                                                <label>Male</label>
-                                                <input type="radio" name="title" value="Male">
-                                                <br>
-                                                <label>Female</label>
-                                                <input type="radio" name="title" value="Female">
-                                                <br>
-                                                <label>Prefer not to says</label>
-                                                <input type="radio" name="title" value="None"> 
-                                            
-                                        </div>
-                                    
-                                </form>
-                            </div>
-                            <input type="submit">
+                                <div id="Sex">
+                                    <div id="bex">
+                                        <label for="title"><b>Gender </b></label>
+                                    </div>
+                                    <div id="cex">
+                                        
+                                        <select  id="gc" name="title" id="title" required>
+                                            <option value="Notsay" selected>Prefer not to say</option>
+                                            <option value="Male">Male</option>
+                                            <option value="Female">Female</option>
+                                            <option value="Non-bi">Non-binary</option>
+                                        </select>
+                                        <label class="required"></label>
 
+                                    
+                                    </div>
+                                
+                                </div>
+                                <br><br><br>
+                            <div class="pp">
+                                <label for="stid" id="stid" class="required stid"> <b>Student ID.</b> </label>
+                                <input type="number" id="stid" name="stid" placeholder="eg. 6900069420" class="fbox" minlength="10" maxlength="10">
+                                
+                            </div>   
+                            <pre>
+
+
+                            </pre>
+                            <div class="facname">
+                                <label for="facname" class="required"> <b>Facility </b> </label>
+                                <input type="text" id="facname" name="facname" placeholder="eg. Math" class="fbox" lang="en"
+                                pattern="[A-Za-z]+" required>
+                            </div>
+                            
+
+                                <br>
+                            </div>
+
+                            <div>
+                                <label for="email" id="email" class="required email"> <b>Email </b> </label>
+                                <input type="email" id="stid" name="stid" placeholder="eg. abc@example.com" class="fbox" required >
+                            </div>
+                                <br>
+                            <div>
+                                <label for="dateofb" id="dateofb" class="required dateofb"> <b>Date of birth</b></label>
+                                <input type="date" name="dateofb" id="dateofb" required>
+                            </div>
+                                <br>
+                            <div id="booktype">
+                                <label for="typebook" id="typebook" class="required typebook"> <b>Pefrerred Book type</b> </label>
+                                <input type="text" id="typebook" name="typebook" placeholder="eg. Horror (English only)" class="fbox" lang="en"
+                                pattern="[A-Za-z]+" required>
+                            </div>
+                                <br>
+                            <div id="news">
+                                <label for="news" id="news" class="required news"><b>Recieve news letter</b></label>
+                                <input type="checkbox" id="news" name="news" >
+                            </div>
+                            <br><br>
+                            <input type="submit">
 
                         </form>
 
